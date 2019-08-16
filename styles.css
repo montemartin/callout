@@ -1,0 +1,117 @@
+:root {
+    --line-color: brown;
+    --line-width: 0.25rem;
+    --circle-diameter: 6rem;
+    --end-length: 2rem;
+}
+
+/* represents any container the component is inserted into */
+#mycontainer {
+    position: relative;
+    margin: auto;
+}
+
+/**
+ * The container for actual product component
+ *
+ * Controls the overall size of the component
+ */
+.component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#tomato {
+    top: 90%;
+}
+
+#relish {
+    top: 30%;
+}
+
+#pickle {}
+
+#onion {}
+
+#bun {}
+
+#peppers {}
+
+#salt {}
+
+.image-container {
+
+}
+
+.selectors {
+    left: 0;
+}
+
+.selector {
+    position: absolute;
+    display: flex;
+    left: 0;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.content {
+    position: relative;
+    float: left;
+}
+
+.line-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.line {
+    flex-grow: 1;
+    height: var(--line-width);
+    background: var(--line-color);
+    position: relative;
+    left: calc(var(--circle-diameter) * -1);
+    margin-left: 6rem;
+}
+
+.line:after {
+    /* circle */
+    position: absolute;
+    background: transparent;
+    content: "";
+    bottom: calc(var(--circle-diameter) / -2);
+    right: calc(var(--circle-diameter) * -1);
+    border: var(--line-width) solid var(--line-color);
+    border-radius: 100%;
+    width: var(--circle-diameter);
+    height: var(--circle-diameter);
+}
+
+.line:before {
+    /* end */
+    position: absolute;
+    content: "";
+    border-left: calc(var(--line-width) / 2) solid var(--line-color);
+    height: var(--end-length);
+    width: var(--end-length);
+    bottom: calc(var(--end-length) / -2);
+}
+
+.line.collapsed {
+
+}
+
+.line.collapsed:before {
+    display: none;
+}
+
+.line.collapsed:after {
+    background: var(--line-color);
+        opacity: .5;
