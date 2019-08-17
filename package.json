@@ -1,0 +1,10 @@
+{
+  "name": "featureCallout",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Monte Martin <monte.martin@multipleinc.com>",
+  "license": "MIT",
+  "dependencies": {
+    "svg.js": "^2.7.1"
+  }
+}
