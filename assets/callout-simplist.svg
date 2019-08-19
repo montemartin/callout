@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 50">
+    <g fill="#FFF" fill-rule="evenodd" stroke="#0563BE" class="callout">
+        <g stroke-width="2" class="loupe" transform="translate(50)">
+            <circle cx="25" cy="25" r="24" class="circle"/>
+            <g class="icon-cross">
+                <path d="M24.5 19v12" class="vertical-line"/>
+                <path d="M18.5 25h12" class="horizontal-line"/>
+            </g>
+        </g>
+        <g class="connector">
+            <path stroke-width="2" d="M51 25H1" class="line"/>
+            <path d="M1 22v6" class="endcap"/>
+        </g>
+    </g>
+</svg>
