@@ -1,14 +1,14 @@
 :root {
-    --line-color: brown;
-    --line-width: 0.25rem;
-    --circle-diameter: 6rem;
-    --end-length: 2rem;
+  --line-color: brown;
+  --line-width: 0.25rem;
+  --circle-diameter: 6rem;
+  --end-length: 2rem;
 }
 
-/* represents any container the component is inserted into */
 #mycontainer {
-    position: relative;
-    margin: auto;
+  /* represents any container the component is inserted into */
+  position: relative;
+  margin: auto;
 }
 
 /**
@@ -17,102 +17,142 @@
  * Controls the overall size of the component
  */
 .component {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 #tomato {
-    top: 45%;
+  top: 45%;
 }
 
 #relish {
-    top: 60%;
+  top: 60%;
 }
 
-#pickle {}
+#pickle {
+}
 
-#onion {}
+#onion {
+}
 
-#bun {}
+#bun {
+}
 
-#peppers {}
+#peppers {
+}
 
-#salt {}
+#salt {
+}
 
 .image-container {
-
 }
 
 .selectors {
-    left: 0;
+  left: 0;
 }
 
 .selector {
-    position: absolute;
-    display: flex;
-    left: 0;
-    width: 50%;
-    align-items: center;
-    justify-content: flex-start;
+  position: absolute;
+  display: flex;
+  left: 0;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.selector svg {
+  flex: 1 1 100%;
 }
 
 .content {
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
 }
 
 .line-container {
-    cursor: pointer;
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .line {
-    flex-grow: 1;
-    height: var(--line-width);
-    background: var(--line-color);
-    position: relative;
-    left: calc(var(--circle-diameter) * -1);
-    margin-left: 6rem;
+  flex-grow: 1;
+  height: var(--line-width);
+  background: var(--line-color);
+  position: relative;
+  left: calc(var(--circle-diameter) * -1);
+  margin-left: 6rem;
 }
 
 .line > .circle {
-    /* circle */
-    position: absolute;
-    background: transparent;
-    content: "";
-    bottom: calc(var(--circle-diameter) / -2);
-    right: calc(var(--circle-diameter) * -1);
-    border: var(--line-width) solid var(--line-color);
-    border-radius: 100%;
-    width: var(--circle-diameter);
-    height: var(--circle-diameter);
+  /* circle */
+  position: absolute;
+  background: transparent;
+  content: "";
+  bottom: calc(var(--circle-diameter) / -2);
+  right: calc(var(--circle-diameter) * -1);
+  border: var(--line-width) solid var(--line-color);
+  border-radius: 100%;
+  width: var(--circle-diameter);
+  height: var(--circle-diameter);
 }
 
 .line > .ending {
-    /* end */
-    position: absolute;
-    content: "";
-    border-left: calc(var(--line-width) / 2) solid var(--line-color);
-    height: var(--end-length);
-    width: var(--end-length);
-    bottom: calc(var(--end-length) / -2);
+  /* end */
+  position: absolute;
+  content: "";
+  border-left: calc(var(--line-width) / 2) solid var(--line-color);
+  height: var(--end-length);
+  width: var(--end-length);
+  bottom: calc(var(--end-length) / -2);
 }
 
 .line.collapsed {
-    display: none
+  display: none;
 }
 
 .line.collapsed > .ending {
-    display: none;
+  display: none;
 }
 
 .line.collapsed > .circle {
-    background: var(--line-color);
-    opacity: .5;
-    display: block;
+  background: var(--line-color);
+  opacity: 0.5;
+  display: block;
+}
+
+.callout .tail {
+  transition: transform 0.25s ease-in;
+  transform: scaleY(1);
+}
+.callout .tail.open {
+  transform: scaleX(0);
+}
+
+.callout .circle {
+  transition: fill 0.25s ease-in;
+  fill: var(--line-color);
+}
+.callout .circle.open {
+  fill: transparent;
+}
+
+fill 0.25s ease-in-out,
+svg #callout > #line {
+}
+
+@keyframes openAnimation {
+  from {
+    transform: scaleY(1);
+    fill: currentColor;
+  }
+  to {
+    transform: scaleY(0);
+    fill: transparent;
+  }
+}
