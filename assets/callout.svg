@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 110 20">
+    <g id="callout">
+        <circle id="circle" cx="100" cy="10" r="9.5" fill="#4a90e2" stroke="#4a90e2"/>
+        <path id="line" stroke="#4a90e2" stroke-width="2" d="M 1 10 h 89"/>
+        <path id="endcap" stroke="#4a90e2" stroke-width="2" d="M 1 6 v 8"/>
+        <g id="icon-cross" stroke="#ffffff" transform="translate(92,2)">
+            <path id="line-vertical" d="M 8 16 V 0"/>
+            <path id="line-horizontal" d="M 0 8 h 16"/>
+        </g>
+    </g>
+</svg>
