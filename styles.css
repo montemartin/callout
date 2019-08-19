@@ -65,25 +65,35 @@
   flex: 1 1 100%;
 }
 
-.content {
-  position: relative;
-  float: left;
+.selector .content {
+  transition: opacity 0.25s ease-in, transform 0.25s ease-in;
+  transform: translateX(100%) scale3d(1, 1, 1);
+  transform-origin: right;
+  opacity: 0;
 }
 
-.callout .tail {
+.selector.open .content {
+  transform: translateX(0%) scale3d(1, 1, 1);
+  opacity: 1;
+}
+
+.selector .tail {
   transition: transform 0.25s ease-in;
   transform: scaleX(0);
+  transform-origin: right;
   stroke: var(--fill-color);
 }
-.callout.open .tail {
-  transform: scaleX(1);
+
+.selector.open .tail {
+  transform: scaleX(1) perspective(20px);
 }
 
-.callout .circle {
+.selector .circle {
   transition: fill 0.25s ease-in;
   fill: var(--fill-color);
   stroke: var(--fill-color);
 }
-.callout.open .circle {
+
+.selector.open .circle {
   fill: transparent;
 }

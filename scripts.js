@@ -1,9 +1,10 @@
 // @todo may need to make this close other element (reuse code from isi tabs)
-const lines = document.querySelectorAll(".callout");
+const lines = document.querySelectorAll(".selector");
 
 lines.forEach( line => {
     line.addEventListener("click", function() {
-        this.classList.toggle("open");
-        this.classList.toggle("closed");
+        x = this.classList
+        x.toggle("open")
+        x.toggle("closed")
     }, false);
 });
