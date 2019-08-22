@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#FFF" stroke="#0563BE" class="loupe">
+    <circle cx="25" cy="25" r="24" class="circle"/>
+    <g class="icon-cross">
+        <path d="M24.5 19v12" class="horizontal"/>
+        <path d="M18.5 25h12" class="vertical"/>
+    </g>
+</svg>

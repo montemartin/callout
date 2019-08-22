@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51" height="8" stroke="#0563BE">
+    <g stroke-linecap="square" class="connector">
+        <path stroke-width="2" d="M50 3H1" class="line"/>
+        <path d="M.5 0v6" class="endcap"/>
+    </g>
+</svg>
